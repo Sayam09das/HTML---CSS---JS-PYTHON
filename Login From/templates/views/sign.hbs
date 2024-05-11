@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <style>
+        body {
+            position: relative;
+            margin: auto;
+            background-image: url("https://i.pinimg.com/736x/55/74/54/557454f9d762c6b6c9efdaec66b4dbb9.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .login-div {
+            width: 430px;
+            height: auto; 
+            min-height: 600px; 
+            position: relative;
+            margin: auto;
+            padding: 100px 35px 35px 35px;
+            border-radius: 40px;
+            background: rgba(239, 235, 235, 0.7);
+        }
+        h1 {
+            display:flex;
+            justify-content: center;
+            position: relative;
+            margin: auto;
+            font-size: 80px;
+            font-family: 'Georgian';
+            color: black;
+        }
+        .logo {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+        }
+        .title {
+            text-align: center;
+            font-size: 28px;
+            padding-top: 24px;
+            letter-spacing: 0.5px;
+            font-family: 'Lato', sans-serif;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 15px;
+            padding-top: 7px;
+            letter-spacing: 3px;
+        }
+        .fields input {
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 18px;
+            color: #555;
+            padding: 20px 10px 20px 5px;
+        }
+        .fields svg {
+            
+            height: 22px;
+            margin: 0 10px -3px 25px;
+        }
+        .name, .email, .password, .roll_no, .branch, .section, .Phone_no, .Local_Address, .Father_name, .Mother_name, .Father_Occupation, .Mother_Occupation, .Father_Phone_No, .Mother_Phone_No, .Father_mail, .Mother_mail, .Parent_address,.date, .x_percentage, .XII_percentage, .MENTORING {
+            margin-bottom: 25px;
+            border-radius: 25px;
+            background: #f1f1f1;
+            box-shadow: inset 8px 8px 8px #cbced1;
+           
+        }
+        .reg-button {
+            border: none;
+            outline: none;
+            cursor: pointer;
+            width: 100%;
+            height: 60px;
+            border-radius: 30px;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: 'Lato', sans-serif;
+            color: rgba(255, 255, 255, 0.973);
+            text-align: center;
+            background: #2b001e;
+            transition: 0.5s;
+        }
+        .reg-button:hover {
+            background: #eeeee1;
+            color: #2b001e;
+            height: 50px;
+            width: 80%;
+            float: center;
+            text-align: center;
+        }
+        .reg-button:active {
+            background: #1da88a;
+        }
+        #information {
+            width: 20px;
+            height: 20px;
+        }
+        
+        .link {
+            padding-top: 20px;
+            text-align: center;
+        }
+        .link a {
+            text-decoration: none;
+            color: #000000;
+            font-size: 20px;
+        }
+        p {
+            padding-top: 20px;
+            text-align: center;
+            font-size: 20px;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>Register form</h1><br>
+    <form action="/sign" method="post" enctype="multipart/form-data">
+        <div class="login-div">
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeQQ8Q1BAlPWFt7mzPNVdlq4AS7otwSHJaV6RXpamI-Q&s">
+            </div>
+            <div class="title">Welcome</div>
+            <div class="subtitle"></div>
+            <div class="fields">
+                <div class="name">
+                    <input type="text" name="name" class="name-input" placeholder="Enter Your Name" required>
+                </div>
+                <div class="email">
+                    <input type="email" name="email" class="email-input" placeholder="Email (Any)" required>
+                </div>
+                <div class="password">
+                    <input type="password" name="password" class="password-input" placeholder="Password" required>
+                </div>
+                <div class="roll_no">
+                    <input type="number" name="roll" class="user-input" placeholder="Roll No" required>
+                </div>
+                <div class="section">
+                    <input type="text" name="section" class="pass-input" placeholder="Section" required>
+                </div>
+                <div class="branch">
+                    <input type="text" name="branch" class="password-input2" placeholder="Branch" required>
+                </div>
+                <div class="Phone_no">
+                    <input type="number" name="phone" class="name-input" placeholder="Phone No" required>
+                </div>
+                <div class="Local_Address">
+                    <input type="text" name="localAddress" class="name-input" placeholder="Local Address" required>
+                </div>
+                <div class="Father_name">
+                    <input type="text" name="fatherName" class="name-input" placeholder="Father's Name" required>
+                </div>
+                <div class="Mother_name">
+                    <input type="text" name="motherName" class="name-input" placeholder="Mother's Name" required>
+                </div>
+                <div class="Father_Occupation">
+                    <input type="text" name="fatherOccupation" class="name-input" placeholder="Father's Occupation" required>
+                </div>
+                <div class="Mother_Occupation">
+                    <input type="text" name="motherOccupation" class="name-input" placeholder="Mother's Occupation" required>
+                </div>
+                <div class="Father_Phone_No">
+                    <input type="number" name="fatherPhoneNo" class="name-input" placeholder="Father's Phone No" required>
+                </div>
+                <div class="Mother_Phone_No">
+                    <input type="number" name="motherPhoneNo" class="name-input" placeholder="Mother's Phone No" required>
+                </div>
+                <div class="Father_mail">
+                    <input type="email" name="fatherMailId" class="name-input" placeholder="Father's Mail Id" required>
+                </div>
+                <div class="Mother_mail">
+                    <input type="email" name="motherMailId" class="name-input" placeholder="Mother Mail Id" required>
+                </div>
+                <div class="Parent_address">
+                    <input type="text" name="parentAddress" class="name-input" placeholder="Parent's Address" required>
+                </div>
+                <div class="date">
+                    <input type="date" name="date" class="name-input" required>
+                </div>
+                <div class="x_percentage">
+                    <input type="number" name="class10Percentage" class="name-input" placeholder="Class X Percentage" required>
+                </div>
+                <div class="XII_percentage">
+                    <input type="number" name="class12Percentage" class="name-input" placeholder="Class XII Percentage" required>
+                </div>
+                <div class="MENTORING">
+                    <input type="text" name="MENTORING" class="name-input" placeholder="MENTORING" required>
+                </div>
+                <label  for="image" style="font-size: 28px">Upload Image (Mendatory):</label>
+                <input type="file" id="images" name="image" required>
+                <div>
+                    <p> <input type="checkbox" id="information" name="information" value="true">I hereby declare that the information furnished above is true, complete and correct to the best of my knowledge and belief.</p>
+                </div>
+            </div>
+            <button class="reg-button" id="reg-buuton">Register</button>
+            <div class="link">
+                <p>Already a member? <a href="#">Sign in</a></p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

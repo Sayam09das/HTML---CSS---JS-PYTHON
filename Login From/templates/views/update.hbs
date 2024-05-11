@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESUBMISSION FROM</title>
+    <style>
+        body {
+            position: relative;
+            margin: auto;
+            background-image: url("https://static.vecteezy.com/system/resources/thumbnails/000/174/801/small_2x/05.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        .login-div {
+            width: 430px;
+            height: auto; 
+            min-height: 600px; 
+            position: relative;
+            margin: auto;
+            padding: 100px 35px 35px 35px;
+            border-radius: 40px;
+            background: rgba(216, 216, 216, 0.7);
+        }
+        h1 {
+            display:flex;
+            justify-content: center;
+            position: relative;
+            margin: auto;
+            font-size: 80px;
+            font-family: 'Georgian';
+            color: white;
+        }
+        .logo {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+        }
+        .title {
+            text-align: center;
+            font-size: 28px;
+            padding-top: 24px;
+            letter-spacing: 0.5px;
+            font-family: 'Lato', sans-serif;
+        }
+        .subtitle {
+            text-align: center;
+            font-size: 15px;
+            padding-top: 7px;
+            letter-spacing: 3px;
+        }
+        .fields input {
+            border: none;
+            outline: none;
+            background: none;
+            font-size: 18px;
+            color: #555;
+            padding: 20px 10px 20px 5px;
+        }
+        .fields svg {
+            height: 22px;
+            margin: 0 10px -3px 25px;
+        }
+        .name, .email, .password, .roll_no, .branch, .section, .Phone_no, .Local_Address, .Father_name, .Mother_name, .Father_Occupation, .Mother_Occupation, .Father_Phone_No, .Mother_Phone_No, .Father_mail, .Mother_mail, .Parent_address,.date, .x_percentage, .XII_percentage, .MENTORING {
+            margin-bottom: 25px;
+            border-radius: 25px;
+            background: #f1f1f1;
+            box-shadow: inset 8px 8px 8px #cbced1,
+            inset -8px -8px 8px #ffffff;
+        }
+        .reg-button {
+            border: none;
+            outline: none;
+            cursor: pointer;
+            width: 100%;
+            height: 60px;
+            border-radius: 30px;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: 'Lato', sans-serif;
+            color: rgba(255, 255, 255, 0.973);
+            text-align: center;
+            background: #2b001e;
+            transition: 0.5s;
+        }
+        .reg-button:hover {
+            background: #eeeee1;
+            color: #2b001e;
+            height: 50px;
+            width: 80%;
+            float: center;
+            text-align: center;
+        }
+        .reg-button:active {
+            background: #1da88a;
+        }
+        #checkbox {
+            width: 20px;
+            height: 20px;
+        }
+        .link {
+            padding-top: 20px;
+            text-align: center;
+        }
+        .link a {
+            text-decoration: none;
+            color: #000000;
+            font-size: 20px;
+        }
+        p {
+            padding-top: 20px;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>RESUBMISSION  FROM</h1><br>
+    <form action="/update" method="post">
+        <div class="login-div">
+            <div class="logo">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeQQ8Q1BAlPWFt7mzPNVdlq4AS7otwSHJaV6RXpamI-Q&s">
+            </div>
+            <div class="title">Welcome</div>
+            <div class="subtitle"></div>
+            <div class="fields">
+                <div class="name">
+                    <input type="text" name="name" class="name-input" value="{{this.name}}" required placeholder="Enter Your name" >
+                </div>
+                <div class="email">
+                    <input type="email" name="email" class="email-input" {{this.email}} required placeholder="Email">
+                </div>
+                <div class="password">
+                    <input type="password" name="password" class="password-input" {{this.password}} required placeholder="Password">
+                </div>
+                <div class="roll_no">
+                    <input type="number" name="roll" class="user-input"  {{this.roll}} required placeholder="Roll No">
+                </div>
+                <div class="section">
+                    <input type="text" name="section" class="pass-input"  {{this.section}} required placeholder="Section">
+                </div>
+                <div class="branch">
+                    <input type="text" name="branch" class="password-input2" {{this.branch}} required placeholder="Branch">
+                </div>
+                <div class="Phone_no">
+                    <input type="number" name="phone" class="name-input" {{this.phone}} required placeholder="Phone No">
+                </div>
+                <div class="Local_Address">
+                    <input type="text" name="localAddress" class="name-input" required {{this.localAddress}} placeholder="Local Address">
+                </div>
+                <div class="Father_name">
+                    <input type="text" name="fatherName" class="name-input" required {{this.fatherName}} placeholder="Father's Name">
+                </div>
+                <div class="Mother_name">
+                    <input type="text" name="motherName" class="name-input" required {{this.motherName}} placeholder="Mother's Name">
+                </div>
+                <div class="Father_Occupation">
+                    <input type="text" name="fatherOccupation" class="name-input" required {{this.fatherOccupation}} placeholder="Father's Occupation">
+                </div>
+                <div class="Mother_Occupation">
+                    <input type="text" name="motherOccupation" class="name-input" required {{this.motherOccupation}} placeholder="Mother's Occupation">
+                </div>
+                <div class="Father_Phone_No">
+                    <input type="number" name="fatherPhoneNo" class="name-input" required {{this.fatherPhoneNo}} placeholder="Father's Phone No">
+                </div>
+                <div class="Mother_Phone_No">
+                    <input type="number" name="motherPhoneNo" class="name-input" required {{this.fatherMailId}} placeholder="Mother's Phone No">
+                </div>
+                <div class="Father_mail">
+                    <input type="email" name="fatherMailId" class="name-input" required {{this.motherPhoneNo}} placeholder="Father's Mail Id">
+                </div>
+                <div class="Mother_mail">
+                    <input type="email" name="motherMailId" class="name-input" required {{this.motherMailId}} placeholder="Mother Mail Id">
+                </div>
+                <div class="Parent_address">
+                    <input type="text" name="parentAddress" class="name-input" required {{this.parentAddress}} placeholder="Parent's Address">
+                </div>
+                <div class="date">
+                    <input type="date" name="date" class="name-input" required {{this.date}}>
+                </div>
+                <div class="x_percentage">
+                    <input type="number" name="class10Percentage" class="name-input" required {{this.class10Percentage}} placeholder="Class X Percentage">
+                </div>
+                <div class="XII_percentage">
+                    <input type="number" name="class12Percentage" class="name-input"required {{this.class12Percentage}} placeholder="Class XII Percentage">
+                </div>
+                <div class="MENTORING">
+                    <input type="text" name="MENTORING" class="name-input"required {{this.MENTORING}} placeholder="MENTORING">
+                </div>
+                <div>
+                    <p><input type="checkbox" id="checkbox">I hereby declare that the information furnished above is true, complete and correct to the best of my knowledge and belief.</p>
+                </div>
+            </div>
+            <input type="hidden" name="_id" value="{{user._id}}">
+            <button class="reg-button">Update</button>
+            <div class="link">
+                <p>Already a member? <a href="#">Sign in</a></p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

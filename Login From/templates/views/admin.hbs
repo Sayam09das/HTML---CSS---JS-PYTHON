@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: lightgreen;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 2px solid #66b3ff; 
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+        }
+
+        th {
+            background-color: lightsalmon; 
+            color: #333;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9; 
+        }
+
+        tbody tr:hover {
+            background-color: #9dd5e6; 
+        }
+
+        
+        th:nth-child(8) {
+            text-align: center;
+        }
+        #sayam{
+            background-color: blue; 
+            color:#fff; 
+            border: none; 
+            border-radius:5px;
+            width: 60px;
+            height: 35px;
+            cursor: pointer;
+            transition: 0s;
+        }
+        #sayam:hover{
+            background-color: white;
+            color: black;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <form action="update" method="get">
+    <h1>Registered Users</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Timestamp</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Roll No</th>
+                <th>Branch</th>
+                <th>Section</th>
+                <th>Phone No</th>
+                <th>Local Address</th>
+                <th>Father's Name</th>
+                <th>Mother's Name</th>
+                <th>Father's Occupation</th>
+                <th>Mother's Occupation</th>
+                <th>Father's Phone No</th>
+                <th>Father's Mail ID</th>
+                <th>Mother's Phone No</th>
+                <th>Mother's Mail ID</th>
+                <th>Parent's Address</th>
+                <th>DATE</th>
+                <th>Class X Percentage</th>
+                <th>Class XII Percentage</th>
+                <th>MENTORING DETAILS</th>
+                <th>checkbox</th>
+                <th>Profile photo</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each users}}
+            <tr>
+                <td>{{this.Timestamp}}</td>
+                <td>{{this.name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.password}}</td>
+                <td>{{this.roll}}</td>
+                <td>{{this.branch}}</td>
+                <td>{{this.section}}</td>
+                <td>{{this.phone}}</td>
+                <td>{{this.localAddress}}</td>
+                <td>{{this.fatherName}}</td>
+                <td>{{this.motherName}}</td>
+                <td>{{this.fatherOccupation}}</td>
+                <td>{{this.motherOccupation}}</td>
+                <td>{{this.fatherPhoneNo}}</td>
+                <td>{{this.fatherMailId}}</td>
+                <td>{{this.motherPhoneNo}}</td>
+                <td>{{this.motherMailId}}</td>
+                <td>{{this.parentAddress}}</td>
+                <td>{{this.date}}</td>
+                <td>{{this.class10Percentage}}</td>
+                <td>{{this.class12Percentage}}</td>
+                <td>{{this.MENTORING}}</td>
+                <td>{{this.information}}</td> 
+                <td><img src="/uploads/{{this.image}}" alt="Profile Photo" width="100"></td>
+                <td><a href="/update"><button id="sayam" >Update</button></a></td>
+
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    </form>
+</body>
+</html>
